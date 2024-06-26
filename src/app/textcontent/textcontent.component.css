@@ -1,0 +1,16 @@
+.container {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.titulo{
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.descripcion {
+    text-align: justify;
+}

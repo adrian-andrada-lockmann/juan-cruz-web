@@ -1,0 +1,15 @@
+.reel {
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+    height: 700px;
+    background-color: black;
+    margin: auto;
+}
+
+#title {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50%;
+}
