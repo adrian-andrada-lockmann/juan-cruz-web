@@ -13,8 +13,8 @@ import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 export class ReelComponent implements OnInit {
   @Input() slides: any[] = [];
   @Input() indicatorsVisible = true;
-  @Input() animationSpeed = 200;
-  @Input() autoPlay = false;
+  @Input() animationSpeed = 50;
+  @Input() autoPlay = true;
   @Input() autoPlaySpeed = 3000;
   currentSlide = 0;
   faArrowRight = faArrowRight;

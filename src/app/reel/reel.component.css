@@ -22,17 +22,20 @@
 }
 
 #indicators {
+    justify-content: center;
+    
+    text-align: center;
     position: relative;
     left: 0px;
     right: 0px;
     margin: auto;
-    bottom: 50px;
+    bottom: 30px;
     width: 200px;
 }
 
 .indicator {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 5px;
     border-radius: 10%;
     background-color: #ffffff;
     display: inline-block;
@@ -58,9 +61,9 @@
 }
 
 .nextButton {
-    right: 2vw;
+    right: 18vw;
 }
 
 .previousButton {
-    left: 2vw;
+    left: 18vw;
 }
