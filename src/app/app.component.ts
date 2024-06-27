@@ -16,29 +16,19 @@ export class AppComponent {
   title = 'juan-cruz-web';
   slides: any[] = [
     {
-      url: 'assets/img/1.jpg',
+      url: 'assets/img/bancorojo.png',
       title: 'First slide',
       description: 'This is the first slide',
     },
     {
-      url: 'https://picsum.photos/200/300',
+      url: 'assets/img/bancorojo2.png',
       title: 'Second slide',
       description: 'This is the second slide',
     },
     {
-      url: 'https://picsum.photos/200/300',
+      url: 'assets/img/bancorojo3.png',
       title: 'Third slide',
       description: 'This is the third slide',
-    },
-    {
-      url: 'https://picsum.photos/200/300',
-      title: 'Fourth slide',
-      description: 'This is the fourth slide',
-    },
-    {
-      url: 'https://picsum.photos/200/300',
-      title: 'Fifth slide',
-      description: 'This is the fifth slide',
     },
   ];
 }

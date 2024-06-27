@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { CommonModule, NgClass, NgStyle } from '@angular/common';
+import { Component, Input, OnInit, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,18 +8,22 @@ import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
   standalone: true,
   imports: [CommonModule, FontAwesomeModule],
   templateUrl: './reel.component.html',
-  styleUrl: './reel.component.css'
+  styleUrls: ['./reel.component.css']
 })
 export class ReelComponent implements OnInit {
   @Input() slides: any[] = [];
   @Input() indicatorsVisible = true;
-  @Input() animationSpeed = 500;
+  @Input() animationSpeed = 200;
   @Input() autoPlay = false;
   @Input() autoPlaySpeed = 3000;
   currentSlide = 0;
   faArrowRight = faArrowRight;
   faArrowLeft = faArrowLeft;
   hidden = false;
+
+  startX: number = 0;
+  endX: number = 0;
+  isDragging: boolean = false;
 
   next() {
     let currentSlide = (this.currentSlide + 1) % this.slides.length;
@@ -45,6 +49,46 @@ export class ReelComponent implements OnInit {
       setInterval(() => {
         this.next();
       }, this.autoPlaySpeed);
+    }
+  }
+
+  onTouchStart(event: TouchEvent) {
+    this.startX = event.touches[0].clientX;
+    this.isDragging = true;
+  }
+
+  onTouchMove(event: TouchEvent) {
+    if (this.isDragging) {
+      this.endX = event.touches[0].clientX;
+    }
+  }
+
+  onTouchEnd() {
+    this.isDragging = false;
+    this.handleSwipe();
+  }
+
+  onMouseDown(event: MouseEvent) {
+    this.startX = event.clientX;
+    this.isDragging = true;
+  }
+
+  onMouseMove(event: MouseEvent) {
+    if (this.isDragging) {
+      this.endX = event.clientX;
+    }
+  }
+
+  onMouseUp() {
+    this.isDragging = false;
+    this.handleSwipe();
+  }
+
+  handleSwipe() {
+    if (this.startX - this.endX > 50) {
+      this.next();
+    } else if (this.endX - this.startX > 50) {
+      this.previous();
     }
   }
 }
