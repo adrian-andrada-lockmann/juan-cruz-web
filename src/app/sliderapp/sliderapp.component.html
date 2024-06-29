@@ -1,0 +1,16 @@
+<swiper-container class="mySwiper" navigation="true" pagination="true" rewind="true" follow-finger="true" grab-cursor="true" keyboard="true" normalize-slide-index="true" simulte-touch="true">
+    <swiper-slide *ngFor="let image of sliderImages"><img [src]="image"></swiper-slide>
+</swiper-container>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+    });
+</script>
