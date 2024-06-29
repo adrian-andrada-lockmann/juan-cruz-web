@@ -1,6 +1,16 @@
 <header>
     <h1>Juan Cruz</h1>
     <div class="info">
-        <a>info</a>
+        <button (click)="openModal()">info</button>
+        <div *ngIf="infoModalSwitch == true">
+            <div class="info-modal">
+                <button (click)="closeModal()">X</button>
+                <h3>diseñador industrial (n. 1998) que vive y<br>
+                    trabaja en Buenos Aires, Argentina
+                    <br>
+                    <a href="https://www.instagram.com/juancruz.xyz/">&#64;juancruz.xyz</a>
+                </h3>
+            </div>
+        </div>
     </div>
 </header>
