@@ -1,16 +1,4 @@
 <header>
-    <h1>Juan Cruz</h1>
-    <div class="info">
-        <button (click)="openModal()">info</button>
-        <div *ngIf="infoModalSwitch == true">
-            <div class="info-modal">
-                <button (click)="closeModal()">X</button>
-                <h3>diseñador industrial (n. 1998) que vive y<br>
-                    trabaja en Buenos Aires, Argentina
-                    <br>
-                    <a href="https://www.instagram.com/juancruz.xyz/">&#64;juancruz.xyz</a>
-                </h3>
-            </div>
-        </div>
-    </div>
+    <h1 class="titulo">Juan Cruz</h1>
+    <ng-content select="header-info"></ng-content>
 </header>

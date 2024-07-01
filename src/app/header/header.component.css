@@ -7,12 +7,11 @@ header {
     width: 100%;
 }
 
-.info {
-    justify-content: center;
-    align-items: center;
-    font-family: Arial;
-    font-size: 80px;
-    color: black;
-    margin-top: 58px;
-    margin-right: 58px;
+
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 7vw;
+    }
 }
+
+

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+.info button {
+    position: absolute;
+    display: flex;
+    background-color: transparent !important;
+    border-color: transparent;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    font-size: 80px;
+    color: black;
+    top: 59px;
+    margin-left: 82vw;
+}
+
+
+.info-modal {
+    background-color: rgb(255, 15, 15);
+    font-family: Arial;
+    position: absolute;
+    top: 150px;
+    right: 180px;
+    width: 100%;
+    height: 150%;
+    z-index: 2;
+    display: flex;
+    justify-content: right;
+    align-items:center;
+    text-align: end;
+
+}
+
+.info-modal button {
+    position: absolute;
+    right: 2vw;
+    top: 300px;
+    color: black;
+    font-family: "Gruppo", Arial;
+    font-size: 150px;
+    background-color: transparent;
+    border-color: transparent;
+}

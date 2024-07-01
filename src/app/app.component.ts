@@ -1,31 +1,23 @@
 import { Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { ReelComponent } from './reel/reel.component';
 import { TextcontentComponent } from './textcontent/textcontent.component';
 import { SliderappComponent } from './sliderapp/sliderapp.component';
-import { SwitchService } from './services/switch.service';
+import { InfoComponent } from './header/info/info.component';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, ReelComponent, TextcontentComponent, SliderappComponent],
+  imports: [RouterOutlet, HeaderComponent, InfoComponent, TextcontentComponent, SliderappComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
 
-
-  infoModalSwitch:boolean;
-
-
-  openModal(){
-    this.infoModalSwitch = true;
-  }
-
   ngOnInit(): void {
-    this.modalSS.$modal.subscribe((valor)=> {this.infoModalSwitch = valor})
+    
   }
   title = 'juan-cruz-web';
 

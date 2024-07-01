@@ -1,24 +1,12 @@
-import { NgIf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { SwitchService } from '../services/switch.service';
+import { Component, ElementRef, Injector, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent implements OnInit {
-  constructor(private modalSS: SwitchService) { }
-
-  ngOnInit(): void {    
-
-  }
-
-
-  closeModal(){
-    this.modalSS.$modal.emit(false)
-  }
-
+export class HeaderComponent {
 }

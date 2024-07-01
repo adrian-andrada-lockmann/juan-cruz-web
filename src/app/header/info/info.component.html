@@ -1,1 +1,13 @@
-
+<div class="info">
+    <button (click)="openModal()">info</button>
+    <div *ngIf="infoModalSwitch == true">
+        <div class="info-modal">
+            <button (click)="closeModal()">X</button>
+            <h2>diseñador industrial (n. 1998) que vive y<br>
+                trabaja en Buenos Aires, Argentina
+                <br>
+                <a href="https://www.instagram.com/juancruz.xyz/">&#64;juancruz.xyz</a>
+            </h2>
+        </div>
+    </div>
+</div>
