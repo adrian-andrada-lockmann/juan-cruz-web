@@ -8,10 +8,16 @@
     justify-content: center;
     align-items: center;
     font-family: Arial;
-    font-size: 80px;
+    font-size: 5vw;
     color: black;
-    top: 59px;
-    margin-left: 82vw;
+    top: 6.15vh;
+    margin-left: 77vw;
+}
+
+@media (max-width: 1024px) {
+    .info button {
+        font-size: 6.15;
+    }
 }
 
 
@@ -25,19 +31,27 @@
     height: 150%;
     z-index: 2;
     display: flex;
-    justify-content: right;
-    align-items:center;
-    text-align: end;
-
-}
+    justify-content: end;
+    align-items:normal;
+    }
 
 .info-modal button {
     position: absolute;
-    right: 2vw;
-    top: 300px;
+    right: 5vw;
+    top: 100px;
     color: black;
     font-family: "Gruppo", Arial;
     font-size: 150px;
     background-color: transparent;
     border-color: transparent;
+}
+
+
+.info-modal h2 {
+    position: absolute;
+    top: 20px;
+    margin: 400px 50px;
+    background-color: blue;
+    text-align: end;
+    
 }
