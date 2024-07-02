@@ -1,10 +1,11 @@
-import { Component, ElementRef, Injector, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
+import { InfoComponent } from './info/info.component';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [InfoComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

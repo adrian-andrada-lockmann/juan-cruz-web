@@ -10,7 +10,7 @@ import { InfoComponent } from './header/info/info.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, InfoComponent, TextcontentComponent, SliderappComponent],
+  imports: [RouterOutlet, HeaderComponent,InfoComponent, TextcontentComponent, SliderappComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

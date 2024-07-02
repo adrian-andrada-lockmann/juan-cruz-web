@@ -22,14 +22,11 @@
 .mySwiper img {
     overflow: hidden;
     width: 52vw;
-    height: 540px !important;
+    height: 640px !important;
     object-fit:cover;
-    
 }
 
-.mySwiper .swiper-pagination-bullet {
 
-}
 
 
 
